@@ -1,0 +1,35 @@
+{
+  "name": "solidity-ts-dev-stack-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhlsthrm/solidity-ts-dev-stack-example.git"
+  },
+  "author": "rhlsthrm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhlsthrm/solidity-ts-dev-stack-example/issues"
+  },
+  "homepage": "https://github.com/rhlsthrm/solidity-ts-dev-stack-example#readme",
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.0.1",
+    "@nomiclabs/buidler-ethers": "^1.0.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^2.1.0",
+    "ethers": "^4.0.38",
+    "ts-node": "^8.4.1",
+    "typechain": "^1.0.3",
+    "typechain-target-ethers": "^1.0.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.4"
+  }
+}
