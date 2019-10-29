@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build && npm run typechain",
+    "compile": "npx buidler compile",
+    "typechain": "npx buidler compile && typechain --outDir typechain --target ethers 'build/*.json'",
+    "test": "npx buidler test"
   },
   "repository": {
     "type": "git",
