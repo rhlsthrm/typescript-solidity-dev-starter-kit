@@ -1,11 +1,9 @@
 import { ethers } from "@nomiclabs/buidler";
 
-import CounterArtifact from "../build/Counter.json";
-import { Wallet, ContractFactory } from "ethers";
-
 async function main() {
   const factory = await ethers.getContract("Counter")
-  // Notice we pass in "Hello World" as the parameter to the constructor
+
+  // If we had constructor arguments, they would be passed into deploy()
   let contract = await factory.deploy();
 
   // The address the Contract WILL have once mined
