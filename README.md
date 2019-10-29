@@ -4,6 +4,37 @@ This is a starter kit for developing, testing, and deploying smart contracts wit
 
 ## Using this Project
 
-Clone this repository, then install the dependencies with `npm install`.
+Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`. https://buidler.dev has excellent docs, and can be used as reference for extending this project.
 
-## Available Commands
+## Available Functionality
+
+### Build Contracts
+
+`npm run compile`
+
+### Generate TypeChain Typings
+
+`npm run typechain`
+
+### Run Contract Tests
+
+`npm run test`
+
+### Deploy to Ethereum
+
+Create/modify network config in `buidler.config.ts` and add API key and private key, then run:
+
+`npx buidler run --network rinkeby scripts/deploy.ts`
+
+### Verify on Etherscan
+
+Add Etherscan API key to `buidler.config.ts`, then run:
+
+`npx buidler verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`
+
+## Enhancement Wish List
+
+* Better migrations strategy (Buidler working on this)
+* Create and integrate Typechain Buidler plugin
+
+PRs and feedback welcome!
