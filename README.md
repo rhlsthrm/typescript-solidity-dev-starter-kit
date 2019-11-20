@@ -14,7 +14,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 ### Generate TypeChain Typings
 
-`npm run typechain`
+`npm run build`
 
 ### Run Contract Tests
 
@@ -35,6 +35,5 @@ Add Etherscan API key to `buidler.config.ts`, then run:
 ## Enhancement Wish List
 
 * Better migrations strategy (Buidler working on this)
-* Create and integrate Typechain Buidler plugin
 
 PRs and feedback welcome!
