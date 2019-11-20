@@ -23,17 +23,18 @@
     "@nomiclabs/buidler": "^1.0.1",
     "@nomiclabs/buidler-ethers": "^1.0.1",
     "@nomiclabs/buidler-etherscan": "^1.0.1",
+    "@types/chai": "^4.2.4",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.11.7",
+    "buidler-typechain": "0.0.5",
     "chai": "^4.2.0",
     "ethereum-waffle": "^2.1.0",
-    "ethers": "^4.0.38",
+    "ethers": "^4.0.39",
+    "ts-generator": "0.0.8",
     "ts-node": "^8.4.1",
     "typechain": "^1.0.3",
-    "typechain-target-ethers": "^1.0.1",
+    "typechain-target-ethers": "^1.0.2",
     "typescript": "^3.6.4"
   },
-  "dependencies": {
-    "@types/chai": "^4.2.4"
-  }
+  "dependencies": {}
 }

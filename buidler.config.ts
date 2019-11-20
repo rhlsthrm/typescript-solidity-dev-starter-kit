@@ -3,6 +3,7 @@ import waffleDefaultAccounts from "ethereum-waffle/dist/config/defaultAccounts";
 
 usePlugin("@nomiclabs/buidler-ethers");
 usePlugin("@nomiclabs/buidler-etherscan");
+usePlugin("buidler-typechain");
 
 const INFURA_API_KEY = "";
 const RINKEBY_PRIVATE_KEY = "";
@@ -33,6 +34,10 @@ const config: BuidlerConfig = {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
     apiKey: ETHERSCAN_API_KEY
+  },
+  typechain: {
+    outDir: "typechain",
+    target: "ethers"
   }
 };
 
