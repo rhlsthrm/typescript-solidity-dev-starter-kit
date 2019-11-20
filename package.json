@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run compile && npm run typechain",
+    "build": "npm run compile && npx buidler typechain",
     "compile": "npx buidler compile",
-    "typechain": "npx buidler compile && typechain --outDir typechain --target ethers 'build/*.json'",
     "test": "npx buidler test"
   },
   "repository": {
