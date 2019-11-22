@@ -20,6 +20,8 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 `npm run test`
 
+Note: As is, the tests fail on purpose. This is to show the Solidity stack traces that Buidler enables!
+
 ### Deploy to Ethereum
 
 Create/modify network config in `buidler.config.ts` and add API key and private key, then run:
