@@ -1,4 +1,4 @@
-pragma solidity 0.5.12;
+pragma solidity ^0.6.2;
 
 contract Counter {
   uint256 count = 0;

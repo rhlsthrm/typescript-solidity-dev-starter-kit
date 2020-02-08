@@ -11,7 +11,7 @@ const ETHERSCAN_API_KEY = "";
 
 const config: BuidlerConfig = {
   solc: {
-    version: "0.5.12"
+    version: "0.6.2"
   },
   paths: {
     artifacts: "./build"
