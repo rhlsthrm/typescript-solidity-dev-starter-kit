@@ -22,6 +22,7 @@
     "@nomiclabs/buidler": "^1.1.2",
     "@nomiclabs/buidler-ethers": "^1.1.2",
     "@nomiclabs/buidler-etherscan": "^1.1.2",
+    "@nomiclabs/buidler-waffle": "^1.1.2",
     "@types/chai": "^4.2.8",
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.0",
@@ -34,6 +35,7 @@
     "typechain": "^1.0.4",
     "typechain-target-ethers": "^1.0.3",
     "typechain-target-truffle": "^1.0.2",
+    "typechain-target-web3-v1": "^1.0.4",
     "typescript": "^3.7.5"
   },
   "dependencies": {}

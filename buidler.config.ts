@@ -1,7 +1,6 @@
 import { BuidlerConfig, usePlugin } from "@nomiclabs/buidler/config";
-import waffleDefaultAccounts from "ethereum-waffle/dist/config/defaultAccounts";
 
-usePlugin("@nomiclabs/buidler-ethers");
+usePlugin("@nomiclabs/buidler-waffle");
 usePlugin("@nomiclabs/buidler-etherscan");
 usePlugin("buidler-typechain");
 
@@ -10,6 +9,7 @@ const RINKEBY_PRIVATE_KEY = "";
 const ETHERSCAN_API_KEY = "";
 
 const config: BuidlerConfig = {
+  defaultNetwork: "buidlerevm",
   solc: {
     version: "0.6.2"
   },
@@ -17,12 +17,6 @@ const config: BuidlerConfig = {
     artifacts: "./build"
   },
   networks: {
-    buidlerevm: {
-      accounts: waffleDefaultAccounts.map(acc => ({
-        balance: acc.balance,
-        privateKey: acc.secretKey
-      }))
-    },
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [RINKEBY_PRIVATE_KEY]
