@@ -13,9 +13,6 @@ const config: BuidlerConfig = {
   solc: {
     version: "0.6.2"
   },
-  paths: {
-    artifacts: "./build"
-  },
   networks: {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
