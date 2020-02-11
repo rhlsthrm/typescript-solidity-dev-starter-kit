@@ -1,6 +1,6 @@
-import { ethers } from "@nomiclabs/buidler";
+import { waffle } from "@nomiclabs/buidler";
 import chai from "chai";
-import { deployContract, getWallets, solidity } from "ethereum-waffle";
+import { deployContract, solidity } from "ethereum-waffle";
 
 import CounterArtifact from "../build/Counter.json";
 import { Counter } from "../typechain/Counter"
@@ -10,10 +10,10 @@ const { expect } = chai;
 
 describe("Counter", () => {
   // 1
-  const provider = ethers.provider;
+  const provider = waffle.provider;
 
   // 2
-  let [wallet] = getWallets(provider);
+  let [wallet] = provider.getWallets();
 
   // 3
   let counter: Counter;

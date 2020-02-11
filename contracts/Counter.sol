@@ -1,5 +1,7 @@
 pragma solidity ^0.6.2;
 
+import "@nomiclabs/buidler/console.sol";
+
 contract Counter {
   uint256 count = 0;
 
@@ -10,6 +12,7 @@ contract Counter {
   }
 
   function countUp() public returns (uint256) {
+    console.log("countUp: count =", count);
     uint256 newCount = count + 1;
     require(newCount > count, "Uint256 overflow");
 
@@ -20,6 +23,7 @@ contract Counter {
   }
 
   function countDown() public returns (uint256) {
+    console.log("countDown: count =", count);
     uint256 newCount = count - 1;
     require(newCount < count, "Uint256 underflow");
 
