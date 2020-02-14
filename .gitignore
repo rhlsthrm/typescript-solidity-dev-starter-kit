@@ -3,3 +3,4 @@ cache/
 build/
 typechain/
 artifacts/
+coverage*
