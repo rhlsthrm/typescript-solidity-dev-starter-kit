@@ -3,7 +3,7 @@ import chai from "chai";
 import { deployContract, solidity } from "ethereum-waffle";
 
 import CounterArtifact from "../artifacts/Counter.json";
-import { Counter } from "../typechain/Counter"
+import { Counter } from "../typechain/Counter";
 
 chai.use(solidity);
 const { expect } = chai;
@@ -19,7 +19,7 @@ describe("Counter", () => {
   let counter: Counter;
 
   beforeEach(async () => {
-    counter = await deployContract(wallet, CounterArtifact) as Counter;
+    counter = (await deployContract(wallet, CounterArtifact)) as Counter;
     const initialCount = await counter.getCount();
 
     // 4
@@ -40,6 +40,7 @@ describe("Counter", () => {
 
   it("should count down", async () => {
     // 6
+    // Expect an error in this test to see the stack trace!
     await counter.countDown();
     const count = await counter.getCount();
     expect(count).to.eq(0);

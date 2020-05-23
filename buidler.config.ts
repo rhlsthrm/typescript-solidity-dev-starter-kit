@@ -11,25 +11,25 @@ const ETHERSCAN_API_KEY = "";
 const config: BuidlerConfig = {
   defaultNetwork: "buidlerevm",
   solc: {
-    version: "0.6.2"
+    version: "0.6.8",
   },
   networks: {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
-      accounts: [RINKEBY_PRIVATE_KEY]
-    }
+      accounts: [RINKEBY_PRIVATE_KEY],
+    },
   },
   etherscan: {
     // The url for the Etherscan API you want to use.
     url: "https://api-rinkeby.etherscan.io/api",
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: ETHERSCAN_API_KEY
+    apiKey: ETHERSCAN_API_KEY,
   },
   typechain: {
     outDir: "typechain",
-    target: "ethers"
-  }
+    target: "ethers-v4",
+  },
 };
 
 export default config;
