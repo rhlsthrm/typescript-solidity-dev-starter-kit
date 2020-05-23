@@ -22,6 +22,12 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 Note: As is, the tests fail on purpose. This is to show the Solidity stack traces that Buidler enables!
 
+### Run Coverage Report for Tests
+
+`npm run coverage`
+
+Note: The branch coverage is 75 %.
+
 ### Deploy to Ethereum
 
 Create/modify network config in `buidler.config.ts` and add API key and private key, then run:

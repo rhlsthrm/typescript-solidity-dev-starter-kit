@@ -1,7 +1,7 @@
-import { waffle } from "@nomiclabs/buidler";
+import { ethers } from "@nomiclabs/buidler";
+import { Signer, Wallet } from "ethers";
 import chai from "chai";
 import { deployContract, solidity } from "ethereum-waffle";
-
 import CounterArtifact from "../artifacts/Counter.json";
 import { Counter } from "../typechain/Counter";
 
@@ -9,17 +9,18 @@ chai.use(solidity);
 const { expect } = chai;
 
 describe("Counter", () => {
-  // 1
-  const provider = waffle.provider;
+  // // 1
+  // const provider = waffle.provider;
 
   // 2
-  let [wallet] = provider.getWallets();
+  let signers: Signer[];
 
   // 3
   let counter: Counter;
 
   beforeEach(async () => {
-    counter = (await deployContract(wallet, CounterArtifact)) as Counter;
+    signers = await ethers.signers();
+    counter = await deployContract(<Wallet>signers[0], CounterArtifact) as Counter;
     const initialCount = await counter.getCount();
 
     // 4
@@ -28,21 +29,27 @@ describe("Counter", () => {
   });
 
   // 5
-  it("should count up", async () => {
-    await counter.countUp();
-    let count = await counter.getCount();
-    expect(count).to.eq(1);
-
-    await counter.countUp();
-    count = await counter.getCount();
-    expect(count).to.eq(2);
+  describe("count up", async () => {
+    it("should count up", async () => {
+      await counter.countUp();
+      let count = await counter.getCount();
+      expect(count).to.eq(1);
+    });
   });
 
-  it("should count down", async () => {
+  describe("count down", async () => {
     // 6
-    // Expect an error in this test to see the stack trace!
-    await counter.countDown();
-    const count = await counter.getCount();
-    expect(count).to.eq(0);
+    it("should fail", async () => {
+      await expect(counter.countDown())
+        .to.be.reverted;
+    });
+
+    it("should count down", async () => {
+      await counter.countUp();
+
+      await counter.countDown();
+      const count = await counter.getCount();
+      expect(count).to.eq(0);
+    });
   });
 });

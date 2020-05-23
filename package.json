@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run compile && npx buidler typechain",
     "compile": "npx buidler compile",
-    "test": "npx buidler test"
+    "test": "npx buidler test",
+    "coverage": "npm run build && npx buidler coverage --temp artifacts --network coverage"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "chai": "^4.2.0",
     "ethereum-waffle": "^2.5.1",
     "ethers": "^4.0.47",
+    "solidity-coverage": "^0.7.5",
     "ts-generator": "0.0.8",
     "ts-node": "^8.10.1",
     "typechain": "^2.0.0",
