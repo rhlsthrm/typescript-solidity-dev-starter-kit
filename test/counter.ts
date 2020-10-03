@@ -1,5 +1,4 @@
 import { ethers } from "@nomiclabs/buidler";
-import { Wallet } from "ethers";
 import chai from "chai";
 import { deployContract, solidity } from "ethereum-waffle";
 import CounterArtifact from "../artifacts/Counter.json";
