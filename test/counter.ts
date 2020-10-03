@@ -13,13 +13,10 @@ describe("Counter", () => {
 
   beforeEach(async () => {
     // 1
-    const signers = await ethers.signers();
+    const signers = await ethers.getSigners();
 
     // 2
-    counter = (await deployContract(
-      <Wallet>signers[0],
-      CounterArtifact
-    )) as Counter;
+    counter = (await deployContract(signers[0], CounterArtifact)) as Counter;
     const initialCount = await counter.getCount();
 
     // 3
