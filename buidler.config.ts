@@ -4,6 +4,7 @@ usePlugin("@nomiclabs/buidler-waffle");
 usePlugin("@nomiclabs/buidler-etherscan");
 usePlugin("buidler-typechain");
 usePlugin("solidity-coverage");
+usePlugin("buidler-gas-reporter");
 
 const INFURA_API_KEY = "";
 const RINKEBY_PRIVATE_KEY = "";
