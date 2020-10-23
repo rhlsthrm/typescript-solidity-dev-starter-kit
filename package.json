@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run compile && npx buidler typechain",
-    "compile": "npx buidler compile",
-    "test": "npx buidler test",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
     "coverage": "npm run build && npx buidler coverage --temp artifacts --network coverage"
   },
   "repository": {
@@ -20,23 +20,25 @@
   },
   "homepage": "https://github.com/rhlsthrm/solidity-ts-dev-stack-example#readme",
   "devDependencies": {
-    "@nomiclabs/buidler": "^1.4.7",
-    "@nomiclabs/buidler-ethers": "^2.0.0",
-    "@nomiclabs/buidler-etherscan": "^2.1.0",
-    "@nomiclabs/buidler-waffle": "^2.1.0",
-    "@typechain/ethers-v5": "^1.0.0",
-    "@types/chai": "^4.2.12",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-etherscan": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "@typechain/ethers-v5": "^2.0.0",
+    "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
-    "@types/node": "^14.11.2",
-    "buidler-typechain": "0.2.1",
+    "@types/node": "^14.14.2",
+    "hardhat-typechain": "^0.2.3",
     "chai": "^4.2.0",
-    "ethereum-waffle": "^3.1.1",
-    "ethers": "^5.0.15",
-    "solidity-coverage": "^0.7.10",
-    "ts-generator": "0.0.8",
+    "ethereum-waffle": "^3.1.2",
+    "ethers": "^5.0.19",
+    "hardhat": "^2.0.0",
+    "solidity-coverage": "^0.7.11",
+    "ts-generator": "^0.1.1",
     "ts-node": "^9.0.0",
-    "typechain": "^2.0.0",
+    "typechain": "^3.0.0",
     "typescript": "^4.0.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }

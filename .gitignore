@@ -4,3 +4,4 @@ build/
 typechain/
 artifacts/
 coverage*
+.env

@@ -1,7 +1,7 @@
-import { ethers } from "@nomiclabs/buidler";
+import { ethers } from "hardhat";
 import chai from "chai";
 import { deployContract, solidity } from "ethereum-waffle";
-import CounterArtifact from "../artifacts/Counter.json";
+import CounterArtifact from "../artifacts/contracts/Counter.sol/Counter.json";
 import { Counter } from "../typechain/Counter";
 
 chai.use(solidity);
@@ -15,7 +15,7 @@ describe("Counter", () => {
     const signers = await ethers.getSigners();
 
     // 2
-    counter = (await deployContract(signers[0], CounterArtifact)) as Counter;
+    counter = await deployContract(signers[0], CounterArtifact);
     const initialCount = await counter.getCount();
 
     // 3

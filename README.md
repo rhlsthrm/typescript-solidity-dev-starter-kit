@@ -1,12 +1,14 @@
 # Typescript Solidity Dev Starter Kit
 
-This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This stack uses [Buidler](https://buidler.dev) as the platform layer to orchestrate all the tasks. [Ethers](https://docs.ethers.io/ethers.js/html/index.html) is used for all Ethereum interactions and testing.
+_Updated to use Hardhat!_
+
+This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This stack uses [Hardhat](https://hardhat.org) as the platform layer to orchestrate all the tasks. [Ethers](https://docs.ethers.io/ethers.js/html/index.html) is used for all Ethereum interactions and testing.
 
 [Blog Post](https://medium.com/@rahulsethuram/the-new-solidity-dev-stack-buidler-ethers-waffle-typescript-tutorial-f07917de48ae)
 
 ## Using this Project
 
-Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`. https://buidler.dev has excellent docs, and can be used as reference for extending this project.
+Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`. https://hardhat.org has excellent docs, and can be used as reference for extending this project.
 
 ## Available Functionality
 
@@ -22,7 +24,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 `npm run test`
 
-Note: As is, the tests fail on purpose. This is to show the Solidity stack traces that Buidler enables!
+Note: As is, the tests fail on purpose. This is to show the Solidity stack traces that Hardhat enables!
 
 ### Run Coverage Report for Tests
 
@@ -32,18 +34,14 @@ Note: The branch coverage is 75 %.
 
 ### Deploy to Ethereum
 
-Create/modify network config in `buidler.config.ts` and add API key and private key, then run:
+Create/modify network config in `hardhat.config.ts` and add API key and private key, then run:
 
-`npx buidler run --network rinkeby scripts/deploy.ts`
+`npx hardhat run --network rinkeby scripts/deploy.ts`
 
 ### Verify on Etherscan
 
-Add Etherscan API key to `buidler.config.ts`, then run:
+Add Etherscan API key to `hardhat.config.ts`, then run:
 
-`npx buidler verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`
-
-## Enhancement Wish List
-
-- Better migrations strategy (Buidler working on this)
+`npx hardhat verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`
 
 PRs and feedback welcome!
