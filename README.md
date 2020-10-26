@@ -12,13 +12,9 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 ## Available Functionality
 
-### Build Contracts
+### Build Contracts and Generate Typechain Typeings
 
 `npm run compile`
-
-### Generate TypeChain Typings
-
-`npm run build`
 
 ### Run Contract Tests & Get Callstacks
 
