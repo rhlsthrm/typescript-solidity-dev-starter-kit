@@ -27,18 +27,18 @@
     "@typechain/ethers-v5": "^2.0.0",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
-    "@types/node": "^14.14.3",
+    "@types/node": "^14.14.5",
     "chai": "^4.2.0",
     "dotenv": "^8.2.0",
     "ethereum-waffle": "^3.1.2",
     "ethers": "^5.0.19",
-    "hardhat": "^2.0.1",
+    "hardhat": "^2.0.2",
     "hardhat-typechain": "^0.3.3",
     "solidity-coverage": "^0.7.11",
     "ts-generator": "^0.1.1",
     "ts-node": "^9.0.0",
     "typechain": "^3.0.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.5"
   },
   "dependencies": {}
 }
