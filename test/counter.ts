@@ -15,7 +15,7 @@ describe("Counter", () => {
     const signers = await ethers.getSigners();
 
     // 2
-    counter = await deployContract(signers[0], CounterArtifact);
+    counter = (await deployContract(signers[0], CounterArtifact)) as Counter;
     const initialCount = await counter.getCount();
 
     // 3
