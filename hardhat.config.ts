@@ -6,7 +6,8 @@ import { HardhatUserConfig } from "hardhat/types";
 import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-typechain";
-import "solidity-coverage";
+// TODO: reenable solidity-coverage when it works
+// import "solidity-coverage";
 
 const INFURA_API_KEY = process.env.INFURA_API_KEY;
 const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY!;

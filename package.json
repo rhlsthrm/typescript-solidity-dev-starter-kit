@@ -34,7 +34,6 @@
     "ethers": "^5.0.19",
     "hardhat": "^2.0.2",
     "hardhat-typechain": "^0.3.3",
-    "solidity-coverage": "^0.7.11",
     "ts-generator": "^0.1.1",
     "ts-node": "^9.0.0",
     "typechain": "^3.0.0",
