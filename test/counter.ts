@@ -1,7 +1,6 @@
 import { ethers } from "hardhat";
 import chai from "chai";
-import { deployContract, solidity } from "ethereum-waffle";
-import CounterArtifact from "../artifacts/contracts/Counter.sol/Counter.json";
+import { solidity } from "ethereum-waffle";
 import { Counter } from "../typechain/Counter";
 
 chai.use(solidity);
@@ -15,7 +14,12 @@ describe("Counter", () => {
     const signers = await ethers.getSigners();
 
     // 2
-    counter = (await deployContract(signers[0], CounterArtifact)) as Counter;
+    const counterFactory = await ethers.getContractFactory(
+      "Counter",
+      signers[0]
+    );
+    counter = (await counterFactory.deploy()) as Counter;
+    await counter.deployed();
     const initialCount = await counter.getCount();
 
     // 3
@@ -35,6 +39,7 @@ describe("Counter", () => {
   describe("count down", async () => {
     // 5
     it("should fail", async () => {
+      // this test will fail
       await counter.countDown();
     });
 
