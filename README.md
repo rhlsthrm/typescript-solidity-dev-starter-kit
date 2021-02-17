@@ -18,7 +18,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 ### Run Contract Tests & Get Callstacks
 
-In one terminal run `npx buidler node`
+In one terminal run `npx hardhat node`
 
 Then in another run `npm run test`
 
