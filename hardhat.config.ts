@@ -4,7 +4,7 @@ dotEnvConfig();
 import { HardhatUserConfig } from "hardhat/types";
 
 import "@nomiclabs/hardhat-waffle";
-import "hardhat-typechain";
+import "@typechain/hardhat";
 import "@nomiclabs/hardhat-etherscan";
 // TODO: reenable solidity-coverage when it works
 // import "solidity-coverage";
