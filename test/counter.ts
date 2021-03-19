@@ -1,9 +1,8 @@
-import { ethers, waffle } from "hardhat";
+import { ethers} from "hardhat";
 import chai from "chai";
 import chaiAsPromised from "chai-as-promised";
 import { Counter__factory, Counter } from "../typechain";
 
-chai.use(waffle.solidity);
 chai.use(chaiAsPromised);
 const { expect } = chai;
 
