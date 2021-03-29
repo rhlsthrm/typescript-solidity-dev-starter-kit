@@ -1,7 +1,6 @@
-pragma solidity ^0.6.8;
+pragma solidity ^0.7.6;
 
 import "hardhat/console.sol";
-
 
 contract Counter {
     uint256 count = 0;
