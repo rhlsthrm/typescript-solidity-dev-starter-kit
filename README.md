@@ -29,7 +29,7 @@ Notes:
 
 ### Run Contract Tests and Generate Gas Usage Report
 
-In one terminal run `npx buidler node`
+In one terminal run `npx hardhat node`
 
 Then in another run `npm run test -- --network localhost`
 
