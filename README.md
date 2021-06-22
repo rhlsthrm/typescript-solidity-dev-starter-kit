@@ -24,7 +24,7 @@ Then in another run `npm run test`
 
 Notes:
 
-- As is, the tests fail on purpose. This is to show the Solidity stack traces that Buidler enables!
+- As is, the tests fail on purpose. This is to show the Solidity stack traces that Hardhat enables!
 - The gas usage table may be incomplete (the gas report currently needs to run with the `--network localhost` flag; see below).
 
 ### Run Contract Tests and Generate Gas Usage Report
@@ -44,7 +44,7 @@ Notes:
 
 Notes:
 
-- running a coverage report currently deletes artifacts, so after each coverage run you will then need to run `npx buidler clean` followed by `npm run build` before re-running tests
+- running a coverage report currently deletes artifacts, so after each coverage run you will then need to run `npx hardhat clean` followed by `npm run build` before re-running tests
 - the branch coverage is 75%
 
 ### Deploy to Ethereum
