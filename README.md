@@ -24,7 +24,6 @@ Then in another run `npm run test`
 
 Notes:
 
-- As is, the tests fail on purpose. This is to show the Solidity stack traces that Hardhat enables!
 - The gas usage table may be incomplete (the gas report currently needs to run with the `--network localhost` flag; see below).
 
 ### Run Contract Tests and Generate Gas Usage Report
